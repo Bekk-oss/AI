@@ -1,6 +1,7 @@
 Predicting the Stock Market with Stacked LSTM and NLP Techniques
 
 Introduction
+
 Predicting stock prices is notoriously challenging – markets are influenced by a myriad of factors, from
 historical trends to breaking news. This project showcases a deep learning approach to forecasting stock
 prices (specifically, next-day closing prices) by combining time-series analysis with natural language
@@ -15,7 +16,7 @@ analysis, but here we blend the two in one neural network. The result is a forec
 potentially detect when news is likely to drive a big price change and adjust its prediction accordingly.
 This README walks through the project’s approach, including the data used, the model architecture,
 results achieved, and key takeaways for future development.
-Dataset and Problem Set
+
 Data Sources: We leverage two primary data sources in this project – historical stock price data and
 financial news articles. For the price data, we gathered daily historical prices (open, close, high, low,
 volume) for our target stock. In our case study, we focused on Tesla (TSLA) as an example, using roughly
@@ -39,9 +40,7 @@ days of stock data (e.g., a window of recent prices) and the corresponding news,
 the next day’s price. We optimize the model to minimize the Root Mean Squared Error (RMSE) between
 our predictions and the actual closing prices. Ultimately, success is measured by how low the prediction error is on unseen test data (lower RMSE and MAE, higher $R^2$ indicating more variance explained).
 
-Model Description
-
-Our model is a hybrid deep neural network that fuses a recurrent model for time series with a
+The model is a hybrid deep neural network that fuses a recurrent model for time series with a
 transformer-based language model for text. Here’s an overview of the architecture :
 News Text Encoder – DistilBERT: We utilize DistilBERT (a lightweight version of BERT) to
 process daily news articles. DistilBERT is a transformer model that captures contextual word
